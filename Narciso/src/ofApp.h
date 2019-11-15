@@ -24,8 +24,18 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     
     
+    ofCamera viewCamera;
+    ofParameter<glm::vec3> camPosition;
+    ofParameter<float> camTruck;
+    ofParameter<float> camBoom;
+    ofParameter<float> camDolly;
+    ofParameter<bool> orientCamera;
+    ofParameter<glm::vec3> camLookAt;
+    ofParameter<float> camPan;
+    ofParameter<float> camTilt;
+    ofParameter<float> camRoll;
+    
     ofxRealSense2::Context rsContext;
-    ofParameter<float> scaleZ;
     ofxPanel guiPanel;
     
     
