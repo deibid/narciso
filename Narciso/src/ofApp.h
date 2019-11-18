@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxRealSense2.h"
 #include "ofxPanel.h"
+#include "ofxCv.h"
 
 class ofApp : public ofBaseApp{
 
@@ -35,13 +36,17 @@ class ofApp : public ofBaseApp{
     ofParameter<float> camTilt;
     ofParameter<float> camRoll;
     
+    ofParameter<bool> drawSquare;
+    
     ofxRealSense2::Context rsContext;
     ofxPanel guiPanel;
     
+    const int INIT_WIDTH = 1464;
+    const int INIT_HEIGHT = 976;
     
-    const int INIT_WIDTH = 1920;
-    const int INIT_HEIGHT = 1200;
+    ofxCv::ObjectFinder objectFinder;
+    ofImage image;
     
-    
+
 		
 };

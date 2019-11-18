@@ -1,13 +1,15 @@
 {
     "Narciso_Settings": {
-        "Boom": "5.99999",
-        "Camera_Position": "-100, 36.7347, 79.5918",
-        "Dolly": "0",
-        "Look_At": "-100, -7.14286, -100",
+        "Boom": "39",
+        "Camera_Position": "-74.4898, 47.9592, 79.5918",
+        "Dolly": "77",
+        "Draw_Square": "0",
+        "Look_At": "-25.5102, 0, 27.551",
         "Orient_Camera": "1",
         "Pan": "0",
         "Roll": "0",
-        "Tilt": "0",
-        "Truck": "-4"
+        "Tilt": "9",
+        "Truck": "-76",
+        "UnknownName": "0, 0, 0"
     }
 }
