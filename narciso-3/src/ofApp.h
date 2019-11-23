@@ -23,13 +23,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    
     ofxRealSense2::Context rsContext;
     ofxPanel guiPanel;
     
     ofParameter<int> translateX;
     ofParameter<int> translateY;
-    ofParameter<float> scaleAmount;
+    ofParameter<float> scaleFactor;
+    
+    bool drawPanel = true;
+    
+    
     
 		
 };

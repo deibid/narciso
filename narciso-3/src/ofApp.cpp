@@ -8,12 +8,12 @@ void ofApp::setup(){
     
     translateX.set("Translate X",0,-100,100);
     translateY.set("Translate Y",0,-100,100);
-    scaleAmount.set("Scale",1.0f, -5.0f, 5.0f);
+    scaleFactor.set("Scale",1.0f, -5.0f, 5.0f);
     
     guiPanel.setup("Options","settings.json");
     guiPanel.add(translateX);
     guiPanel.add(translateY);
-    guiPanel.add(scaleAmount);
+    guiPanel.add(scaleFactor);
     
     
 
@@ -30,33 +30,70 @@ void ofApp::update(){
 void ofApp::draw(){
     
     std::shared_ptr<ofxRealSense2::Device> rsDevice = rsContext.getDevice(0);
+    
     if(rsDevice){
-        ofPushMatrix();
-
+        
+        
+        
+        //scale from center and X&Y translation
         float videoWidth = rsDevice->getColorTex().getWidth();
         float videoHeight = rsDevice->getColorTex().getHeight();
         float windowWidth = ofGetWindowWidth();
         float windowHeight = ofGetWindowHeight();
         
+//        ofTranslate((windowWidth-videoWidth*scaleAmount)/2, (windowHeight-videoHeight*scaleAmount)/2 );
+//        ofScale(scaleAmount,scaleAmount,1);
+//        ofTranslate(translateX, translateY);
+
+        glm::mat4 mat;
+//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
+//        mat = glm::scale(mat,glm::vec3(1.f,1.f,1.f));
+//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
+
+        mat = glm::translate(mat,glm::vec3((windowWidth-videoWidth*scaleFactor)/2, (windowHeight-videoHeight*scaleFactor)/2,0.f));
+//        mat = glm::scale(mat,glm::vec3(1.f,1.f,1.f));
+//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
         
-//        ofTranslate(videoWidth,0);
+        ofPushMatrix();
+        ofMultMatrix(mat);
         
+        //draw the color texture
+//        rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
         
-        ofTranslate((windowWidth-videoWidth*scaleAmount)/2, (windowHeight-videoHeight*scaleAmount)/2 );
-        ofScale(scaleAmount,scaleAmount,1);
+        rsDevice->getDepthTex().draw(videoWidth,0,-videoWidth,videoHeight);
         
-        ofTranslate(translateX, translateY);
+        glm::vec4 globalMouse(ofGetMouseX(),ofGetMouseY(),0.f,1.f);
+        glm::vec4 localMouse = glm::inverse(mat)*globalMouse;
+        ofRectangle rect(0,0,videoWidth, videoHeight);
+        if(rect.inside(localMouse.x, localMouse.y)){
+            cout<<"Mouse inside projected matrix";
+        }
         
-        rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
         ofPopMatrix();
+
+        
+        
+//        float distance = rsDevice->getDistance(ofGetMouseX(), ofGetMouseY());
+//        ofDrawBitmapStringHighlight(ofToString(distance), ofGetMouseX()-10,ofGetMouseY()-10);
+        
+//        ofShortPixels depthPixels = rsDevice->getRawDepthPix();
+//        int depthAtMouse = depthPixels.getColor(ofGetMouseX(),ofGetMouseY()).r;
+//         ofDrawBitmapStringHighlight(ofToString(depthAtMouse), ofGetMouseX() + 16, ofGetMouseY() + 10);
+        
+        ofPopMatrix();
+        
     }
     
-    guiPanel.draw();
+    if(drawPanel)guiPanel.draw();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    
+    if(key == ' '){
+        drawPanel = !drawPanel;
+    }
 
 }
 
