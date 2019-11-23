@@ -6,8 +6,8 @@ void ofApp::setup(){
     ofSetWindowShape(960,540);
     rsContext.setup(true);
     
-    translateX.set("Translate X",0,1,10);
-    translateY.set("Translate Y",0,1,10);
+    translateX.set("Translate X",0,-100,100);
+    translateY.set("Translate Y",0,-100,100);
     scaleAmount.set("Scale",1.0f, -5.0f, 5.0f);
     
     guiPanel.setup("Options","settings.json");
@@ -44,6 +44,8 @@ void ofApp::draw(){
         
         ofTranslate((windowWidth-videoWidth*scaleAmount)/2, (windowHeight-videoHeight*scaleAmount)/2 );
         ofScale(scaleAmount,scaleAmount,1);
+        
+        ofTranslate(translateX, translateY);
         
         rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
         ofPopMatrix();
