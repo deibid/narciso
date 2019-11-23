@@ -6,6 +6,8 @@ void ofApp::setup(){
     ofSetWindowShape(960,540);
     rsContext.setup(true);
     
+    ofSetFrameRate(10);
+    
     translateX.set("Translate X",0,-100,100);
     translateY.set("Translate Y",0,-100,100);
     scaleFactor.set("Scale",1.0f, -5.0f, 5.0f);
@@ -50,9 +52,17 @@ void ofApp::draw(){
 //        mat = glm::scale(mat,glm::vec3(1.f,1.f,1.f));
 //        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
 
-        mat = glm::translate(mat,glm::vec3((windowWidth-videoWidth*scaleFactor)/2, (windowHeight-videoHeight*scaleFactor)/2,0.f));
-//        mat = glm::scale(mat,glm::vec3(1.f,1.f,1.f));
-//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
+        mat = glm::translate(mat,glm::vec3((windowWidth-videoWidth*scaleFactor)/2,
+                                           (windowHeight-videoHeight*scaleFactor)/2,
+                                           0.f));
+        
+        mat = glm::scale(mat,glm::vec3(scaleFactor,
+                                       scaleFactor,
+                                       1.f));
+        
+        mat = glm::translate(mat,glm::vec3(translateX,
+                                           translateY,
+                                           0.f));
         
         ofPushMatrix();
         ofMultMatrix(mat);
@@ -64,6 +74,15 @@ void ofApp::draw(){
         
         glm::vec4 globalMouse(ofGetMouseX(),ofGetMouseY(),0.f,1.f);
         glm::vec4 localMouse = glm::inverse(mat)*globalMouse;
+        
+        int boundedMouseX = ofClamp(localMouse.x, 0,videoWidth);
+        int boundedMouseY = ofClamp(localMouse.y,0, videoHeight);
+
+        float distance = rsDevice->getDistance(boundedMouseX, boundedMouseY);
+        ofDrawBitmapStringHighlight(ofToString(distance), boundedMouseX,boundedMouseY);
+        
+        cout << "LocalX -> "<<localMouse.x <<"\nLocalY -> "<<localMouse.y<<"\n\n\n";
+        
         ofRectangle rect(0,0,videoWidth, videoHeight);
         if(rect.inside(localMouse.x, localMouse.y)){
             cout<<"Mouse inside projected matrix";
@@ -73,8 +92,7 @@ void ofApp::draw(){
 
         
         
-//        float distance = rsDevice->getDistance(ofGetMouseX(), ofGetMouseY());
-//        ofDrawBitmapStringHighlight(ofToString(distance), ofGetMouseX()-10,ofGetMouseY()-10);
+
         
 //        ofShortPixels depthPixels = rsDevice->getRawDepthPix();
 //        int depthAtMouse = depthPixels.getColor(ofGetMouseX(),ofGetMouseY()).r;
