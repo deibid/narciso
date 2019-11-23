@@ -6827,6 +6827,437 @@
 				<key>sourceTree</key>
 				<string>SOURCE_ROOT</string>
 			</dict>
+			<key>6DC59E2BC584A4DC866DBA45</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxToggle.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxToggle.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>30730953BB96EAEFBC560F4A</key>
+			<dict>
+				<key>fileRef</key>
+				<string>CF1D91AC772DC3EE59BF2008</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>CF1D91AC772DC3EE59BF2008</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxToggle.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxToggle.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B74ACA2F8E69C96F7DB5A571</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSliderGroup.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxSliderGroup.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CE022A324E921BA1732BE62E</key>
+			<dict>
+				<key>fileRef</key>
+				<string>A1EE946AC39327E58FEC59F6</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>A1EE946AC39327E58FEC59F6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSliderGroup.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxSliderGroup.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>24523A5D9607B4FF4E2A2AD0</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSlider.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxSlider.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>028A950495BFF85324406CFF</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C51633368C234B6D342F3726</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C51633368C234B6D342F3726</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxSlider.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxSlider.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>DFCC3B40A436D026DE3A3E11</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPanel.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxPanel.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E61A888E93269057F2184494</key>
+			<dict>
+				<key>fileRef</key>
+				<string>0D056691654AA16A3F567245</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>0D056691654AA16A3F567245</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxPanel.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxPanel.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3167F4B461955EFD2C51C620</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxLabel.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxLabel.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>32225D33AFB349F3FD97A6DE</key>
+			<dict>
+				<key>fileRef</key>
+				<string>34E71F0CD4A04298E6382FC3</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>34E71F0CD4A04298E6382FC3</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxLabel.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxLabel.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7BE275A4BA24F1355B577C8F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxInputField.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxInputField.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>0F9980881FF2D83C79F70C17</key>
+			<dict>
+				<key>fileRef</key>
+				<string>9AB76C1E20A52F91A2086110</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>9AB76C1E20A52F91A2086110</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxInputField.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxInputField.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AF372B5CF8DF80B9C7C98E73</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGuiGroup.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxGuiGroup.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>AAF758DA68EB211EE79D1CF5</key>
+			<dict>
+				<key>fileRef</key>
+				<string>8AA8B40A162B55263F89AB50</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>8AA8B40A162B55263F89AB50</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGuiGroup.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxGuiGroup.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F267A2CED580573C36F76479</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxGui.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxGui.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>125C88C9125C9DF69763F99F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxColorPicker.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxColorPicker.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7AEB655420991A540072BA42</key>
+			<dict>
+				<key>fileRef</key>
+				<string>D4D24606F6C215A37DABC7FE</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>D4D24606F6C215A37DABC7FE</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxColorPicker.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxColorPicker.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>59FBC576163E58377767245F</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxButton.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxButton.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7638B12F64D4A4D52A8CE70C</key>
+			<dict>
+				<key>fileRef</key>
+				<string>29CE639BC9E1E2F384417EF4</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>29CE639BC9E1E2F384417EF4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxButton.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxButton.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5673E43BF70CF33CAE4B31A6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxBaseGui.h</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxBaseGui.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A763ED608B35AE3310251DEE</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>8B4A37B490AD917BCB156121</string>
+					<string>5673E43BF70CF33CAE4B31A6</string>
+					<string>29CE639BC9E1E2F384417EF4</string>
+					<string>59FBC576163E58377767245F</string>
+					<string>D4D24606F6C215A37DABC7FE</string>
+					<string>125C88C9125C9DF69763F99F</string>
+					<string>F267A2CED580573C36F76479</string>
+					<string>8AA8B40A162B55263F89AB50</string>
+					<string>AF372B5CF8DF80B9C7C98E73</string>
+					<string>9AB76C1E20A52F91A2086110</string>
+					<string>7BE275A4BA24F1355B577C8F</string>
+					<string>34E71F0CD4A04298E6382FC3</string>
+					<string>3167F4B461955EFD2C51C620</string>
+					<string>0D056691654AA16A3F567245</string>
+					<string>DFCC3B40A436D026DE3A3E11</string>
+					<string>C51633368C234B6D342F3726</string>
+					<string>24523A5D9607B4FF4E2A2AD0</string>
+					<string>A1EE946AC39327E58FEC59F6</string>
+					<string>B74ACA2F8E69C96F7DB5A571</string>
+					<string>CF1D91AC772DC3EE59BF2008</string>
+					<string>6DC59E2BC584A4DC866DBA45</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>480A780D8D0308AE4A368801</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>A763ED608B35AE3310251DEE</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxGui</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>ECABA665951130DD30856294</key>
+			<dict>
+				<key>fileRef</key>
+				<string>8B4A37B490AD917BCB156121</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>8B4A37B490AD917BCB156121</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>4</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxBaseGui.cpp</string>
+				<key>path</key>
+				<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src/ofxBaseGui.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>873F2BD1A608B2DE7BC81AFB</key>
 			<dict>
 				<key>children</key>
@@ -7693,6 +8124,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>
@@ -7804,6 +8236,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>
@@ -7915,6 +8348,7 @@ fi
 				<key>children</key>
 				<array>
 					<string>6025FAF6414C2CA589764D26</string>
+					<string>480A780D8D0308AE4A368801</string>
 					<string>A0B90D3B0ADB9C1716816714</string>
 					<string>FA4C22F6B900C5085706B832</string>
 				</array>
@@ -10686,6 +11120,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>
@@ -10817,6 +11252,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>
@@ -10921,6 +11357,16 @@ fi
 					<string>786D89B72281CB16214420FB</string>
 					<string>DA981AEF68D6921DD9A04A00</string>
 					<string>D3BB059CCD1BA3D5C053FD80</string>
+					<string>ECABA665951130DD30856294</string>
+					<string>7638B12F64D4A4D52A8CE70C</string>
+					<string>7AEB655420991A540072BA42</string>
+					<string>AAF758DA68EB211EE79D1CF5</string>
+					<string>0F9980881FF2D83C79F70C17</string>
+					<string>32225D33AFB349F3FD97A6DE</string>
+					<string>E61A888E93269057F2184494</string>
+					<string>028A950495BFF85324406CFF</string>
+					<string>CE022A324E921BA1732BE62E</string>
+					<string>30730953BB96EAEFBC560F4A</string>
 					<string>7D1ABA35FFBB41A41897EE7B</string>
 					<string>E6904AB78087144608B3643E</string>
 					<string>F60AE6E2392F72A11A7E7946</string>
@@ -11033,6 +11479,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>
@@ -11163,6 +11610,7 @@ fi
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxCv/src</string>
+						<string>../../../../of_v0.10.1_osx_release/addons/ofxGui/src</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv</string>
 						<string>../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include</string>

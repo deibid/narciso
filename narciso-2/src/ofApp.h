@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxCv.h"
 #include "ofxRealSense2.h"
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -30,6 +31,24 @@ class ofApp : public ofBaseApp{
     ofxRealSense2::Context rsContext;
     
     ofTexture colorPixels;
+    
+    ofCamera cam;
+    ofxPanel guiPanel;
+    ofParameter<float> camTilt;
+    ofParameter<bool> drawDepthTex;
+    
+    ofParameter<glm::vec3> camPosition;
+    ofParameter<float> camTruck;
+    ofParameter<float> camBoom;
+    ofParameter<float> camDolly;
+    ofParameter<bool> orientCamera;
+    ofParameter<glm::vec3> camLookAt;
+    ofParameter<float> camPan;
+//    ofParameter<float> camTilt;
+    ofParameter<float> camRoll;
+    
+    ofParameter<bool> useCamera;
+    
     
     
 		

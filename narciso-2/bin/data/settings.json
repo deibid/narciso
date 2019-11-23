@@ -1,0 +1,26 @@
+{
+    "3D_World": {
+        "Boom": "0",
+        "Cam_Look_At": "0, 0, 0",
+        "Cam_Position": "0, 0, 90",
+        "Dolly": "0",
+        "Orient_Camera": "1",
+        "Pan": "0",
+        "Roll": "0",
+        "Tilt": "0",
+        "Truck": "0",
+        "Use_Camera": "0"
+    },
+    "Camera_Controls": {
+        "Boom": "18",
+        "Cam_Look_At": "0, 0, 0",
+        "Cam_Position": "0, 0, 50",
+        "Dolly": "25",
+        "Orient_Camera": "0",
+        "Pan": "0",
+        "Roll": "0",
+        "Tilt": "9.9",
+        "Truck": "28",
+        "Use_Camera": "0"
+    }
+}
