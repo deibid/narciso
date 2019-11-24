@@ -26,6 +26,11 @@ void ofApp::setup(){
     guiPanel.add(farBandThreshold);
     
     
+    std::shared_ptr<ofxRealSense2::Device> rsDevice = rsContext.getDevice(0);
+    if(rsDevice){
+        guiPanel.add(rsDevice->params);
+    }
+    
     
 
 }
@@ -55,14 +60,9 @@ void ofApp::draw(){
 //        ofTranslate(translateX, translateY);
 
         glm::mat4 mat;
-//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
-//        mat = glm::scale(mat,glm::vec3(1.f,1.f,1.f));
-//        mat = glm::translate(mat,glm::vec3(0.f,0.f,0.f));
-
         mat = glm::translate(mat,glm::vec3((windowWidth-videoWidth*scaleFactor)/2,
                                            (windowHeight-videoHeight*scaleFactor)/2,
                                            0.f));
-        
         mat = glm::scale(mat,glm::vec3(scaleFactor, scaleFactor, 1.f));
         mat = glm::translate(mat,glm::vec3(translateX, translateY, 0.f));
         
@@ -73,18 +73,34 @@ void ofApp::draw(){
         if(!drawDepth){
             rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
         }else{
-            ofFloatPixels rawDepthPixels = rsDevice->getRawDepthPix();
-            ofFloatPixels near, far, result;
+            ofShortPixels rawDepthPixels = rsDevice->getRawDepthPix();
+            ofShortPixels near, far, mask;
             
             ofxCv::threshold(rawDepthPixels, near, nearBandThreshold);
             ofxCv::threshold(rawDepthPixels, far, farBandThreshold,true);
-            ofxCv::bitwise_and(near,far,result);
+            ofxCv::bitwise_and(near,far,mask);
             
-            thresholdImage.setFromPixels(result);
+//            cout<<"mask channels: "<<mask.getNumChannels();
+//            cout<<"depth channels: "<<rawDepthPixels.getNumChannels();
+            
+            cout<<"mask width: "<<mask.getWidth() << "  mask height: "<<mask.getHeight()<<endl;
+            cout<<"depth width: "<<rawDepthPixels.getWidth() << "  depth height: "<<rawDepthPixels.getHeight()<<endl;
+
+            
+            ofShortPixels rawShorts = rsDevice->getRawDepthPix();
+            ofShortPixels maskedShortPixels = maskPixels(rawShorts, mask);
+            thresholdImage.setFromPixels(maskedShortPixels);
             thresholdImage.draw(videoWidth,0,-videoWidth,videoHeight);
+            
+            
+//            thresholdImage.setFromPixels(mask);
+//            thresholdImage.draw(videoWidth,0,-videoWidth,videoHeight);
+            
+//            ofFloatPixels maskedDepthPixels = maskFloatPixels(rawDepthPixels, mask);
+//            thresholdImage.setFromPixels(maskedDepthPixels);
+//            thresholdImage.draw(videoWidth,0,-videoWidth,videoHeight);
+            
         }
-        
-        
         
         
         
@@ -98,7 +114,6 @@ void ofApp::draw(){
         int depthAtMouse = depthPixels.getColor(boundedMouseX, boundedMouseY).r;
         ofDrawBitmapStringHighlight(ofToString(depthAtMouse), boundedMouseX, boundedMouseY);
     
-//        cout << "LocalX -> "<<localMouse.x <<"\nLocalY -> "<<localMouse.y<<"\n\n\n";
         ofRectangle rect(0,0,videoWidth, videoHeight);
         if(rect.inside(localMouse.x, localMouse.y)){
             cout<<"Mouse inside projected matrix";
@@ -110,6 +125,29 @@ void ofApp::draw(){
     
     if(drawPanel)guiPanel.draw();
 
+}
+
+
+ofShortPixels ofApp::maskPixels(ofShortPixels pixels, ofShortPixels mask){
+    
+    
+    ofShortPixels result;
+    result.allocate(pixels.getWidth(), pixels.getHeight(), pixels.getNumChannels());
+    
+    for(int i = 0; i<pixels.size(); i++){
+        result[i] = pixels[i] * mask[i];
+//        float p = pixels.getColor(i).r;
+//        cout<<p<<endl;
+//        float m = mask.getColor(i).r;
+//        float res = p*m;
+////        if(m != 0){
+////            cout<<"match"<<endl;
+////        }
+//        result[i] = res;
+    }
+    
+    return result;
+    
 }
 
 //--------------------------------------------------------------
