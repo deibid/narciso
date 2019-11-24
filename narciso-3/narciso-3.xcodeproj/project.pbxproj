@@ -18,7 +18,7 @@
 		47D789D6254E05C945E00E1F /* fdog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE44EA68AEDD478DA872BA25 /* fdog.cpp */; };
 		59C9131027965F300B0464C5 /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5F9F33E6149010F54B49CE /* ofxCvShortImage.cpp */; };
 		5FD72A8729C70637DB508336 /* Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D37C7CEB9C9A57E49979360 /* Distance.cpp */; };
-		63B83D50238A1B5200E8DBF8 /* Keyshot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63B83D4E238A1B5200E8DBF8 /* Keyshot.cpp */; };
+		63B83D50238A1B5200E8DBF8 /* Keyframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63B83D4E238A1B5200E8DBF8 /* Keyframe.cpp */; };
 		63B83D53238A1C5F00E8DBF8 /* Calibrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63B83D51238A1C5F00E8DBF8 /* Calibrator.cpp */; };
 		67E2B876FD8F2FD3298AABEB /* ETF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2995F4B6F3CE601C1D37CAE /* ETF.cpp */; };
 		756B253A33A70B4D1BE548F1 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4A6FFB82C450DFDBE3988FF /* Context.cpp */; };
@@ -232,8 +232,8 @@
 		628161AF780A89A457983C6E /* vizcore.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = vizcore.hpp; path = ../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/viz/vizcore.hpp; sourceTree = SOURCE_ROOT; };
 		632723E60120D9E40E057D37 /* cap_ios.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cap_ios.h; path = ../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/videoio/cap_ios.h; sourceTree = SOURCE_ROOT; };
 		63A2C667BA40CACE7E586FB3 /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = ../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
-		63B83D4E238A1B5200E8DBF8 /* Keyshot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keyshot.cpp; sourceTree = "<group>"; };
-		63B83D4F238A1B5200E8DBF8 /* Keyshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keyshot.h; sourceTree = "<group>"; };
+		63B83D4E238A1B5200E8DBF8 /* Keyframe.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keyframe.cpp; sourceTree = "<group>"; };
+		63B83D4F238A1B5200E8DBF8 /* Keyframe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Keyframe.h; sourceTree = "<group>"; };
 		63B83D51238A1C5F00E8DBF8 /* Calibrator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Calibrator.cpp; sourceTree = "<group>"; };
 		63B83D52238A1C5F00E8DBF8 /* Calibrator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calibrator.h; sourceTree = "<group>"; };
 		63C289F89C6C396527F7C927 /* private.cuda.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = private.cuda.hpp; path = ../../../../of_v0.10.1_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/core/private.cuda.hpp; sourceTree = SOURCE_ROOT; };
@@ -1914,8 +1914,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				63B83D4E238A1B5200E8DBF8 /* Keyshot.cpp */,
-				63B83D4F238A1B5200E8DBF8 /* Keyshot.h */,
+				63B83D4E238A1B5200E8DBF8 /* Keyframe.cpp */,
+				63B83D4F238A1B5200E8DBF8 /* Keyframe.h */,
 				63B83D51238A1C5F00E8DBF8 /* Calibrator.cpp */,
 				63B83D52238A1C5F00E8DBF8 /* Calibrator.h */,
 			);
@@ -2092,7 +2092,7 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				67E2B876FD8F2FD3298AABEB /* ETF.cpp in Sources */,
-				63B83D50238A1B5200E8DBF8 /* Keyshot.cpp in Sources */,
+				63B83D50238A1B5200E8DBF8 /* Keyframe.cpp in Sources */,
 				47D789D6254E05C945E00E1F /* fdog.cpp in Sources */,
 				B4FAE12F7C29E8BFC50BABB2 /* Calibration.cpp in Sources */,
 				F539E0971ADE680A7D543718 /* ContourFinder.cpp in Sources */,

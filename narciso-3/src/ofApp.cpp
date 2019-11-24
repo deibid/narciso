@@ -120,18 +120,18 @@ void ofApp::keyPressed(int key){
     }
     
     if(key == 'a'){
-        Keyshot k1(1,100);
-        Keyshot k2(2,400);
-        Keyshot k3(3,500);
+        Keyframe k1(1,100,20,40);
+        Keyframe k2(.2,400,20,40);
+        Keyframe k3(.6,500,20,45);
         
-        calibrator.addNewKeyshot(k1);
-        calibrator.addNewKeyshot(k2);
-        calibrator.addNewKeyshot(k3);        
+        calibrator.addNewKeyframe(k1);
+        calibrator.addNewKeyframe(k2);
+        calibrator.addNewKeyframe(k3);        
     }
     if(key =='b'){
         calibrator.toString();
-        Keyshot k = calibrator.getScaleKeyshot(1.7);
-        cout<<"your result is -> "<<k.depth<<" depth at:   "<<k.scale<<"  scale \n\n";
+        Keyframe k = calibrator.getScaleKeyframes(1.7);
+        cout<<"your result is -> "<<k.depth<<" depth at:   "<<k.scale<<"  scale" <<endl;
     }
 
 }

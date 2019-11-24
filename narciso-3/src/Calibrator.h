@@ -9,7 +9,7 @@
 #define Calibrator_h
 
 #include "ofMain.h"
-#include "Keyshot.h"
+#include "Keyframe.h"
 #include <stdio.h>
 #include <iostream>
 #include <vector>
@@ -18,10 +18,13 @@ class Calibrator{
     
 public:
     
-    void addNewKeyshot(Keyshot k);
+    void addNewKeyframe(Keyframe k);
     void toString();
-    Keyshot getScaleKeyshot(float depth);
-    std::vector<Keyshot> dataKeyshots;
+    Keyframe getScaleKeyframes(float depth);
+    static bool compareKeyframes(Keyframe k1, Keyframe k2);
+    
+    
+    std::vector<Keyframe> dataKeyframes;
 };
 
 

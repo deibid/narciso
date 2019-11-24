@@ -10,12 +10,12 @@
 
 #include <stdio.h>
 
-class Keyshot{
+class Keyframe{
   
 public:
     float depth;
     float scale;
-    Keyshot(float,float);
+    Keyframe(float,float);
 };
 
 
