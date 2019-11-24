@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxGui.h"
 #include "ofxRealSense2.h"
+#include "ofxCv.h"
 
 class ofApp : public ofBaseApp{
 
@@ -23,6 +24,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    void drawDepthOnCursor(glm::mat4 mat);
+    
     ofxRealSense2::Context rsContext;
     ofxPanel guiPanel;
     
@@ -30,7 +33,14 @@ class ofApp : public ofBaseApp{
     ofParameter<int> translateY;
     ofParameter<float> scaleFactor;
     
+    ofParameter<float> nearBandThreshold;
+    ofParameter<float> farBandThreshold;
+    
+    ofParameter<bool> drawDepth;
+    
     bool drawPanel = true;
+    
+    ofImage thresholdImage;
     
     
     

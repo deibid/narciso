@@ -1,7 +1,10 @@
 {
     "Options": {
-        "Scale": "3.05",
-        "Translate_X": "4",
-        "Translate_Y": "-86"
+        "Far_Depth": "0.0135",
+        "Near_Depth": "0.004",
+        "Scale": "1",
+        "Show_Depth": "1",
+        "Translate_X": "0",
+        "Translate_Y": "0"
     }
 }

@@ -11,11 +11,20 @@ void ofApp::setup(){
     translateX.set("Translate X",0,-100,100);
     translateY.set("Translate Y",0,-100,100);
     scaleFactor.set("Scale",1.0f, -5.0f, 5.0f);
+    drawDepth.set("Show Depth",false);
+    nearBandThreshold.set("Near Depth",0.01f,0.f,0.1f);
+    farBandThreshold.set("Far Depth",0.02,0.f,0.1f);
+    
+    
     
     guiPanel.setup("Options","settings.json");
     guiPanel.add(translateX);
     guiPanel.add(translateY);
     guiPanel.add(scaleFactor);
+    guiPanel.add(drawDepth);
+    guiPanel.add(nearBandThreshold);
+    guiPanel.add(farBandThreshold);
+    
     
     
 
@@ -34,8 +43,6 @@ void ofApp::draw(){
     std::shared_ptr<ofxRealSense2::Device> rsDevice = rsContext.getDevice(0);
     
     if(rsDevice){
-        
-        
         
         //scale from center and X&Y translation
         float videoWidth = rsDevice->getColorTex().getWidth();
@@ -67,22 +74,38 @@ void ofApp::draw(){
         ofPushMatrix();
         ofMultMatrix(mat);
         
-        //draw the color texture
-//        rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
         
-        rsDevice->getDepthTex().draw(videoWidth,0,-videoWidth,videoHeight);
+        if(!drawDepth){
+            rsDevice->getColorTex().draw(videoWidth,0,-videoWidth,videoHeight);
+        }else{
+            ofFloatPixels rawDepthPixels = rsDevice->getRawDepthPix();
+            ofFloatPixels near, far, result;
+            
+            ofxCv::threshold(rawDepthPixels, near, nearBandThreshold);
+            ofxCv::threshold(rawDepthPixels, far, farBandThreshold,true);
+            ofxCv::bitwise_and(near,far,result);
+            
+            thresholdImage.setFromPixels(result);
+            thresholdImage.draw(videoWidth,0,-videoWidth,videoHeight);
+            
+        }
+        
         
         glm::vec4 globalMouse(ofGetMouseX(),ofGetMouseY(),0.f,1.f);
         glm::vec4 localMouse = glm::inverse(mat)*globalMouse;
         
         int boundedMouseX = ofClamp(localMouse.x, 0,videoWidth);
         int boundedMouseY = ofClamp(localMouse.y,0, videoHeight);
+        
+        ofShortPixels depthPixels = rsDevice->getRawDepthPix();
+        int depthAtMouse = depthPixels.getColor(boundedMouseX, boundedMouseY).r;
+        ofDrawBitmapStringHighlight(ofToString(depthAtMouse), boundedMouseX+ 16, boundedMouseY + 10);
+        
 
-        float distance = rsDevice->getDistance(boundedMouseX, boundedMouseY);
-        ofDrawBitmapStringHighlight(ofToString(distance), boundedMouseX,boundedMouseY);
         
+    
         cout << "LocalX -> "<<localMouse.x <<"\nLocalY -> "<<localMouse.y<<"\n\n\n";
-        
+    
         ofRectangle rect(0,0,videoWidth, videoHeight);
         if(rect.inside(localMouse.x, localMouse.y)){
             cout<<"Mouse inside projected matrix";
@@ -90,16 +113,6 @@ void ofApp::draw(){
         
         ofPopMatrix();
 
-        
-        
-
-        
-//        ofShortPixels depthPixels = rsDevice->getRawDepthPix();
-//        int depthAtMouse = depthPixels.getColor(ofGetMouseX(),ofGetMouseY()).r;
-//         ofDrawBitmapStringHighlight(ofToString(depthAtMouse), ofGetMouseX() + 16, ofGetMouseY() + 10);
-        
-        ofPopMatrix();
-        
     }
     
     if(drawPanel)guiPanel.draw();
