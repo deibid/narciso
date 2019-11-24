@@ -4,6 +4,7 @@
 #include "ofxGui.h"
 #include "ofxRealSense2.h"
 #include "ofxCv.h"
+#include "Calibrator.h"
 
 class ofApp : public ofBaseApp{
 
@@ -24,7 +25,8 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-    void drawDepthOnCursor(glm::mat4 mat);
+    
+    Calibrator calibrator;
     
     ofxRealSense2::Context rsContext;
     ofxPanel guiPanel;
@@ -35,7 +37,6 @@ class ofApp : public ofBaseApp{
     
     ofParameter<float> nearBandThreshold;
     ofParameter<float> farBandThreshold;
-    
     ofParameter<bool> drawDepth;
     
     bool drawPanel = true;

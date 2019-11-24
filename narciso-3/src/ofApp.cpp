@@ -63,13 +63,8 @@ void ofApp::draw(){
                                            (windowHeight-videoHeight*scaleFactor)/2,
                                            0.f));
         
-        mat = glm::scale(mat,glm::vec3(scaleFactor,
-                                       scaleFactor,
-                                       1.f));
-        
-        mat = glm::translate(mat,glm::vec3(translateX,
-                                           translateY,
-                                           0.f));
+        mat = glm::scale(mat,glm::vec3(scaleFactor, scaleFactor, 1.f));
+        mat = glm::translate(mat,glm::vec3(translateX, translateY, 0.f));
         
         ofPushMatrix();
         ofMultMatrix(mat);
@@ -87,8 +82,10 @@ void ofApp::draw(){
             
             thresholdImage.setFromPixels(result);
             thresholdImage.draw(videoWidth,0,-videoWidth,videoHeight);
-            
         }
+        
+        
+        
         
         
         glm::vec4 globalMouse(ofGetMouseX(),ofGetMouseY(),0.f,1.f);
@@ -99,13 +96,9 @@ void ofApp::draw(){
         
         ofShortPixels depthPixels = rsDevice->getRawDepthPix();
         int depthAtMouse = depthPixels.getColor(boundedMouseX, boundedMouseY).r;
-        ofDrawBitmapStringHighlight(ofToString(depthAtMouse), boundedMouseX+ 16, boundedMouseY + 10);
-        
-
-        
+        ofDrawBitmapStringHighlight(ofToString(depthAtMouse), boundedMouseX, boundedMouseY);
     
-        cout << "LocalX -> "<<localMouse.x <<"\nLocalY -> "<<localMouse.y<<"\n\n\n";
-    
+//        cout << "LocalX -> "<<localMouse.x <<"\nLocalY -> "<<localMouse.y<<"\n\n\n";
         ofRectangle rect(0,0,videoWidth, videoHeight);
         if(rect.inside(localMouse.x, localMouse.y)){
             cout<<"Mouse inside projected matrix";
@@ -124,6 +117,21 @@ void ofApp::keyPressed(int key){
     
     if(key == ' '){
         drawPanel = !drawPanel;
+    }
+    
+    if(key == 'a'){
+        Keyshot k1(1,100);
+        Keyshot k2(2,400);
+        Keyshot k3(3,500);
+        
+        calibrator.addNewKeyshot(k1);
+        calibrator.addNewKeyshot(k2);
+        calibrator.addNewKeyshot(k3);        
+    }
+    if(key =='b'){
+        calibrator.toString();
+        Keyshot k = calibrator.getScaleKeyshot(1.7);
+        cout<<"your result is -> "<<k.depth<<" depth at:   "<<k.scale<<"  scale \n\n";
     }
 
 }
