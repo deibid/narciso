@@ -9,6 +9,7 @@
 #define Keyframe_h
 
 #include <stdio.h>
+#include <iostream>
 
 class Keyframe{
     
@@ -19,6 +20,7 @@ public:
     float translateY;
     
     Keyframe(float,float,float,float);
+    void toString();
 };
 
 

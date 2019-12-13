@@ -5,6 +5,7 @@
 #include "ofxRealSense2.h"
 #include "ofxCv.h"
 #include "Calibrator.h"
+#include "ofxCenteredTrueTypeFont.h"
 
 class ofApp : public ofBaseApp{
     
@@ -14,35 +15,40 @@ public:
     void draw();
     
     void keyPressed(int key);
-    void keyReleased(int key);
-    void mouseMoved(int x, int y );
-    void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
-    void mouseReleased(int x, int y, int button);
-    void mouseEntered(int x, int y);
-    void mouseExited(int x, int y);
-    void windowResized(int w, int h);
-    void dragEvent(ofDragInfo dragInfo);
-    void gotMessage(ofMessage msg);
     
     
+    
+    long calculateAverageDepthInFrame();
+    ofPixels& getThresholdPixels();
+    
+    ofImage generateNoiseEffect();
+    ofImage generateSolidRainbowEffect();
+    ofImage generateAroundSubjectBoxEffect();
+    std::string getRandomString();
+    std::string activeMessage;
+    
+    ofxCenteredTrueTypeFont font;
     
     int safeMouseX;
     int safeMouseY;
-//
-//    float videoWidth;
-//    float videoHeight;
-//    float windowWidth;
-//    float windowHeight;
-//
-//    glm::mat4 mat;
-    
-    ofShortPixels maskPixels(ofShortPixels pixels, ofShortPixels mask);
-    
     
     Calibrator calibrator;
     
     ofxRealSense2::Context rsContext;
+    std::shared_ptr<ofxRealSense2::Device> rsDevice;
+    bool deviceConnected = false;
+    
+    
+    
+    float videoWidth;
+    float videoHeight;
+    float windowWidth;
+    float windowHeight;
+    
+    ofFbo fbo;
+    
+    
     ofxPanel guiPanel;
     
     ofParameter<int> translateX;
@@ -54,11 +60,26 @@ public:
     ofParameter<bool> drawDepth;
     
     ofParameter<bool> calibrationMode;
+    ofParameter<bool> playMode;
+    
+    
+    
     long averageDepthInFrame;
     
     bool drawPanel = true;
     
     ofImage thresholdImage;
+    ofImage backgroundImage;
+    
+    ofParameter<int> blurAmount;
+    
+    ofParameterGroup effectGroup;
+    ofParameter<bool> effectToggle;
+    ofParameter<int> effectNumber;
+
+    int prevEffectNumber = 1;
+    
+    
     
     
     

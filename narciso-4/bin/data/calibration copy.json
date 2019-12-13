@@ -1,0 +1,94 @@
+{
+    "data": [
+        {
+            "depth": 745.0,
+            "scale": 2.86499977111816,
+            "translateX": 44.0,
+            "translateY": -10.0
+        },
+        {
+            "depth": 473.0,
+            "scale": 1.48999977111816,
+            "translateX": 44.0,
+            "translateY": -100.0
+        },
+        {
+            "depth": 745.0,
+            "scale": 2.86499977111816,
+            "translateX": 44.0,
+            "translateY": -10.0
+        },
+        {
+            "depth": 473.0,
+            "scale": 1.48999977111816,
+            "translateX": 44.0,
+            "translateY": -100.0
+        },
+        {
+            "depth": 745.0,
+            "scale": 2.86499977111816,
+            "translateX": 44.0,
+            "translateY": -10.0
+        },
+        {
+            "depth": 759.0,
+            "scale": 2.97500038146973,
+            "translateX": 44.0,
+            "translateY": 0.0
+        },
+        {
+            "depth": 473.0,
+            "scale": 1.48999977111816,
+            "translateX": 44.0,
+            "translateY": -100.0
+        },
+        {
+            "depth": 745.0,
+            "scale": 2.86499977111816,
+            "translateX": 44.0,
+            "translateY": -10.0
+        },
+        {
+            "depth": 759.0,
+            "scale": 2.97500038146973,
+            "translateX": 44.0,
+            "translateY": 0.0
+        },
+        {
+            "depth": 1012.0,
+            "scale": 3.69000053405762,
+            "translateX": 44.0,
+            "translateY": 73.0
+        },
+        {
+            "depth": 473.0,
+            "scale": 1.48999977111816,
+            "translateX": 44.0,
+            "translateY": -100.0
+        },
+        {
+            "depth": 745.0,
+            "scale": 2.86499977111816,
+            "translateX": 44.0,
+            "translateY": -10.0
+        },
+        {
+            "depth": 759.0,
+            "scale": 2.97500038146973,
+            "translateX": 44.0,
+            "translateY": 0.0
+        },
+        {
+            "depth": 1012.0,
+            "scale": 3.69000053405762,
+            "translateX": 44.0,
+            "translateY": 73.0
+        },
+        {
+            "depth": 1419.0,
+            "scale": 6.0,
+            "translateX": 26.0,
+            "translateY": 83.0
+        }
+    ]
+}

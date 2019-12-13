@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "depth": 864.0,
+            "scale": 4.73499965667725,
+            "translateX": 8.0,
+            "translateY": 25.0
+        },
+        {
+            "depth": 738.0,
+            "scale": 4.18499946594238,
+            "translateX": 8.0,
+            "translateY": -1.0
+        },
+        {
+            "depth": 864.0,
+            "scale": 4.73499965667725,
+            "translateX": 8.0,
+            "translateY": 25.0
+        },
+        {
+            "depth": 560.0,
+            "scale": 3.80000019073486,
+            "translateX": 8.0,
+            "translateY": -16.0
+        },
+        {
+            "depth": 738.0,
+            "scale": 4.18499946594238,
+            "translateX": 8.0,
+            "translateY": -1.0
+        },
+        {
+            "depth": 864.0,
+            "scale": 4.73499965667725,
+            "translateX": 8.0,
+            "translateY": 25.0
+        },
+        {
+            "depth": 522.0,
+            "scale": 3.19499969482422,
+            "translateX": 8.0,
+            "translateY": -22.0
+        },
+        {
+            "depth": 560.0,
+            "scale": 3.80000019073486,
+            "translateX": 8.0,
+            "translateY": -16.0
+        },
+        {
+            "depth": 738.0,
+            "scale": 4.18499946594238,
+            "translateX": 8.0,
+            "translateY": -1.0
+        },
+        {
+            "depth": 864.0,
+            "scale": 4.73499965667725,
+            "translateX": 8.0,
+            "translateY": 25.0
+        }
+    ]
+}

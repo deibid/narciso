@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include "ofMain.h"
 #include "Keyframe.h"
-#include <stdio.h>
 #include <iostream>
 #include <vector>
 
@@ -22,6 +21,9 @@ public:
     void addNewKeyframe(Keyframe k);
     void toString();
     Keyframe getScaleKeyframes(float depth);
+    bool readFile();
+    void parseDataFromFile(ofFile f);
+    void saveDataToFile();
     static bool compareKeyframes(Keyframe k1, Keyframe k2);
     
     

@@ -1,0 +1,39 @@
+{
+    "Options": {
+        "Blur": "12",
+        "Calibration_Mode": "0",
+        "Effects": {
+            "EffectToggle": "1",
+            "Effect_Number": "2"
+        },
+        "Far_Depth": "1000",
+        "Intel_RealSense_D435_935322071217": {
+            "Align": "2",
+            "Auto-exposure": "1",
+            "Decimate": "0",
+            "Decimate_Magnitude": "2",
+            "Disparity_Transform": "0",
+            "Emitter": "1",
+            "Hole_Filling": "1",
+            "Hole_Filling_Mode": "1",
+            "IR_Exposure": "8500",
+            "Max_Depth": "6",
+            "Min_Depth": "0",
+            "Spatial_Filter": "0",
+            "Spatial_Hole_Filling_Mode": "0",
+            "Spatial_Magnitude": "2",
+            "Spatial_Smooth_Alpha": "0.5",
+            "Spatial_Smooth_Delta": "20",
+            "Temporal_Filter": "0",
+            "Temporal_Persistency_Mode": "3",
+            "Temporal_Smooth_Alpha": "0.4",
+            "Temporal_Smooth_Delta": "20"
+        },
+        "Near_Depth": "200",
+        "Play_Mode": "0",
+        "Scale": "3.025",
+        "Show_Depth": "0",
+        "Translate_X": "0",
+        "Translate_Y": "0"
+    }
+}
